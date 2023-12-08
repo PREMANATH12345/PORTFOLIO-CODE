@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a656394404.js" crossorigin="anonymous"></script>
+    <style>
+
+        body{
+            background-color: rgb(1, 19, 13);
+            color: white;
+        }
+      
+        #top{
+            display: grid;
+            grid-template-columns: 40% 20% 40%;
+            margin-left: 80px;
+            margin-top: 50px;
+        }
+        #top a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+        #top a:hover{
+            color:rgba(13, 101, 184, 0.849) ;
+            
+        }
+        #bot{
+            display: grid;
+            grid-template-columns: 40% 20% 40%;
+            margin-left: 80px;
+            margin-top: 160px;
+        }
+        #bot img{
+            height: 400px;
+        }
+        #bot button{
+            background-color: rgba(13, 101, 184, 0.849);
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 5px;
+        }
+        #bot button:hover{
+            background-color: white;
+            color:rgba(13, 101, 184, 0.849) ;
+        }
+        #icon{
+            padding-top: 10px;
+
+        }
+        #icon a{
+            padding-right: 10px;
+        }
+        .blue,#sk1{
+            color: rgba(13, 101, 184, 0.849);
+        }
+        #sk{
+            position: absolute;
+            top: 180px;
+            right: 00px;
+            width: 500px;
+        }
+        #sk img{
+           border-radius: 50%;
+        }
+        @media only screen and (max-width : 600px){
+            body{
+                background-color: rgb(1, 19, 13);
+            }
+            #top{
+                margin: 0%;
+                padding: 10px;
+                display: grid;
+                grid-template-columns: 100%;
+        }
+        #bot{
+            display: grid;
+            grid-template-columns: 100%;
+            margin-top: 30px;
+            margin-left: 10px;
+            padding: 10px;
+            
+        }
+        #sk{
+            position: static;
+        }
+        .hid{
+            display: none;
+        }
+        }
+       
+            
+        
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div class="hid">
+            <p >PREMANATH S</p>
+        </div>
+        <div class="hid"></div>
+        <div>
+        <a href="/">Home</a>
+        <a href="{% url 'qua' %}">Qualification</a>
+        <a href="{% url 'skills' %}">Skills</a>
+        <a href="{% url 'pro' %}">Projects</a>
+        <a href="{% url 'about' %}">About</a>
+        </div>
+
+    </div>
+    {% block content %}{% endblock %}
+
+</body>
+</html>

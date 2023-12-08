@@ -1,16 +1,10 @@
 {% extends 'master.html' %}
-
 {% block title %}
 PROFILE
 {% endblock %}
-
-{% load static %}
-
 {% block content %}
 
-
 <div id="bot">
-    
     <div id="name">
         <h6>Hello,<SPAN class="blue"> I'm</SPAN> </h6>
         <h1 class="blue">PREMANATH S</h1>
@@ -23,12 +17,28 @@ PROFILE
             <a href=""><i class="fa-brands fa-square-github"></i></a>
             <a href=""><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <div></div>
-        <div id="sk">
-            <img src="{% static 'prem1.jpg' %}" alt="">
-        </div>
-        
     </div>
+    <div class="hid"></div>
+    <div id="sk">
+        
+        <h1 id="sk1">SKILLS</h1>
+        <br>
+        <h6>PROGRAMMING</h6>
+        <ul>
+            <li>PYTHON</li>
+        </ul>
+        <h6>WEB DEVELOPMENT</h6>
+        <ul> 
+            <li>HTML,CSS,JAVASCRIPT,BOOTSTRAP</li>
+            <li>PYTHON,DJANGO,FLASK,GIT</li>
+        </ul>
+        <h6>DATABASE HANDLING</h6>
+        <ul>
+            <li>MONGO DB</li>
+            <li>MYSQL</li>
+        </ul>
+    </div>
+    
     
 
 {% endblock %}
